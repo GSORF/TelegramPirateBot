@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  spamguard-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pirate-spam-guard-bot:latest
+    restart: unless-stopped
+    environment:
+      # Here you can set your environment variables
+      # For example, to set the Telegram bot token:
+      TELEGRAM_BOT_TOKEN: "YOUR_BOT_TOKEN_HIER"
